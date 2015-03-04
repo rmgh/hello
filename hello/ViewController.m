@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *label1;
 
 @end
 
@@ -22,6 +23,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)button:(UIButton *)sender {
+    _label1.text = @"もうすぐホワイトデー。義理、本命にかかわらず、相手が喜ぶお返しをしたいもの。女子の本音や人気のギフトを参考に、準備を進めよう。";
 }
 
 @end
