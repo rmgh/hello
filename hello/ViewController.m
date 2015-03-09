@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *label1;
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 
 @end
 
@@ -18,14 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [_messageLabel setText: @"春に向けて、お部屋をちょっとオシャレに変えたいあなた。ひとりでも簡単に使えるアイテムで、自分好みの空間作りを始めませんか。"];
+    secondMessage = @"もうすぐホワイトデー。義理、本命にかかわらず、相手が喜ぶお返しをしたいもの。女子の本音や人気のギフトを参考に、準備を進めよう。";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)button:(UIButton *)sender {
-    _label1.text = @"もうすぐホワイトデー。義理、本命にかかわらず、相手が喜ぶお返しをしたいもの。女子の本音や人気のギフトを参考に、準備を進めよう。";
+    NSString *str = secondMessage;
+    secondMessage = [_messageLabel text];
+    [_messageLabel setText: str];
+    
+    
 }
 
 @end
